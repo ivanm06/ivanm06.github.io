@@ -214,6 +214,8 @@
             let resultado = []
             let resNum = 0;
 
+
+            guess.style.backgroundColor = `#${user.join('')}`;
             for (i = 0; i < 6; i++){
                 let ind = arr.indexOf(user[i])
                 let ind2 = arr.indexOf(generated[i])
@@ -243,7 +245,6 @@
             status.innerHTML = `${ar[Math.floor((resNum*3)/96)]} ${5-round} guesses left.`
             inputField.value = '#'
             round++;
-            guess.style.backgroundColor = `#${user.join('')}`;
             
             if (round > 5){
                 playing = false;
