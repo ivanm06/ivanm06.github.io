@@ -112,6 +112,49 @@
         </div>
         <p id="copy">© 2024 GreenBite. Todos los derechos reservados.</p>
     </footer>
+    <!-- Elemenots semi-dinámicos -->
+    <section id="popup" class="none">
+        <p id="mensaje"></p>
+    </section>
+    <section id="cesta">
+        <div class="container none" onclick="toggleCart()">
+            <div class="content" onclick="event.stopPropagation()">
+                <svg onclick="toggleCart()" class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <nav>
+                    <span>Cesta de la compra</span>
+                    <span id="delete" onclick="clearCart()">Eliminar todo</span>
+                </nav>
+                <div id="items">
+                    <div class="cesta-item">
+                        <img src="./images/acai-bowl.jpg" alt="">
+                        <div class="cesta-item-info">
+                            <h2>Item Cesta</h2>
+                            <p>Espinacas, Kale, Piña, Mango, Leche de almendras</p>
+    
+                            <div id="cesta-add">
+                                <svg id="cesta-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                                <span>0</span>
+                                <svg id="cesta-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg>
+                            </div>
+                        </div>
+                        <span>$0.00</span>
+                    </div>
+                </div>
+                <hr>
+                <div id="total">
+                    <div>
+                        <h5>Sub-Total</h5>
+                        <span><span id="cantidad">2</span> elemento/s</span>
+                    </div>
+                    <span id="precio">$0.00</span>
+                </div>
+            </div>
+        </div>
+        <div id="icon" onclick="toggleCart()">
+            <div class="none"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

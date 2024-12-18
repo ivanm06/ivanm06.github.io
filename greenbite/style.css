@@ -336,6 +336,7 @@ footer h1{
     max-width: 100%;
     min-width: 100%;
     min-height: 50px;
+    max-height: 200px;
 }
 .contacto input[type="submit"]{
     background-color: var(--green4);
@@ -448,6 +449,33 @@ section{
 .infoplato .content h4{
     margin: 0;
 }
+.close:hover{
+    transform: scale(1.1);
+    color: #ff0000;
+}
+.infoplato .content img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.infoplato .content button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5vw;
+    width: fit-content;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    margin: 0 auto;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00000020;
+    background-color: var(--green4);
+}
+.infoplato .content button:hover{
+    background-color: var(--green3);
+}
+
 .under svg{
     width: 30px;
     height: auto;
@@ -461,15 +489,6 @@ section{
     right: 0;
     margin: 1vh 1vw;
     cursor: pointer;
-}
-.infoplato .content svg:hover{
-    transform: scale(1.1);
-    color: #ff0000;
-}
-.infoplato .content img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
 }
 #menu .plato .img{
     position: relative;
@@ -517,6 +536,161 @@ section{
     background-color: #3b9f2f !important;
 }
 
+/* Cesta */
+#cesta #icon{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 2vw;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: fit-content;
+    box-shadow: 0 0 10px #00000030;
+    cursor: pointer;
+}
+#cesta #icon svg{
+    margin: 1vh 1vh;
+    width: 3rem;
+    height: 3rem;
+    color: black;
+}
+#cesta #icon div{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 80%;
+    left: 80%;
+    background-color: #ee0000;
+    border-radius: 50vw;
+    font-size: 1.3rem;
+    box-shadow: 0 0 10px #00000070;
+}
+#cesta #icon:hover{
+    background-color: #f5f5f5;
+}
+#cesta .container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #00000040;
+    backdrop-filter: blur(2px);
+    z-index: 3;
+    align-content: center;
+    overflow-y: auto;
+}
+#cesta .content{
+    background-color: rgb(241, 241, 241);
+    width: 95%;
+    max-width: 900px;
+    margin: 2vh auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00000020;
+    padding: 6vh 1vw 4vh 1vw;
+    position: relative;
+    user-select: none;
+}
+#cesta nav{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+#cesta #delete{
+    color: red;
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#cesta #delete:hover{
+    color: #cb0000;
+}
+.cesta-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    img{
+        width: 70%;
+        height: 40vw;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #00000040;
+    }
+}
+#cesta-add{
+    display: flex;
+    gap: 10vw;
+    font-size: 2rem;
+    align-items: center;
+    place-self: center;
+    margin: 3vh 0;
+}
+#cesta-btn{
+    background-color: #bbbbbb;
+    border-radius: 50vw;
+    padding: .2vw;
+    display: block;
+    font-size: auto;
+    cursor: pointer;
+}
+.cesta-item-info{
+    text-align: left;
+    font-size: 1rem;
+}
+#cesta .container .content hr{
+    width: 90%;
+}
+#cesta #total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 6vw;
+}
+#cesta #total *{
+    margin: 0;
+    text-align: left;
+}
+#cesta #total span{
+    font-size: .8rem;
+    color: #7c7c7c;
+}
+#cesta #total #precio{
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* Popup */
+#popup{
+    --mainColor: #dcdcdc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 3vw;
+    z-index: 10;
+    background-color: var(--mainColor);
+    padding: 2vh 1vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000040;
+    inset: 3;
+    border: 1px dotted black;
+    outline: 10px solid var(--mainColor);
+}
+#popup #mensaje{
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
 @media (min-width: 600px){
     footer{
         flex-direction: row;
@@ -553,7 +727,36 @@ section{
     .contacto form{
         padding: 3vh 1vw;
     }
-    menu{visibility: hidden;}
+    menu{
+        visibility: hidden;
+    }
+    /* Cesta */
+    .cesta-item{
+        flex-direction: row;
+    }
+    .cesta-item img{
+        width: 10vw;
+        height: 10vw;
+    }
+    #cesta-add{
+        gap: 1vw;
+        margin: 3vh 0 0 0;
+        font-size: 1rem;
+    }
+    #cesta .container .content hr{
+        width: 70%;
+        float: right;
+    }
+    #cesta #total {
+        justify-content: end;
+        flex-direction: row;
+    }
+    #popup{
+        bottom: 0;
+        right: 0;
+        top: unset;
+        left: unset;
+    }
 }
 ::-webkit-scrollbar{
     width: 5px;

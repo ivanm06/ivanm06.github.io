@@ -1,5 +1,6 @@
 [{
-    "nombre": "Açai Bowl", 
+    "nombre": "Açai Bowl",
+    "id": 0,
     "descripcion": "Un tazón energizante de açai con frutas frescas, granola y un toque de miel orgánica.",
     "tag": "Desayuno",
     "precio": 7.50,
@@ -10,7 +11,8 @@
     "temporada_recomendada": "Verano"
 },
 {
-    "nombre": "Smoothie Verde", 
+    "nombre": "Smoothie Verde",
+    "id": 1, 
     "descripcion": "Una mezcla refrescante de espinacas, kale, mango, piña y leche de almendras.",
     "tag": "Desayuno",
     "precio": 5.90,
@@ -22,6 +24,7 @@
 },
 {
     "nombre": "Quinoa Bowl", 
+    "id": 2,
     "descripcion": "Quinoa orgánica con vegetales asados, garbanzos especiados y aderezo de tahini.",
     "tag": "Almuerzo",
     "precio": 9.20,
@@ -33,6 +36,7 @@
 },
 {
     "nombre": "Hamburguesa Vegana", 
+    "id": 3,
     "descripcion": "Hamburguesa de lentejas y remolacha con aguacate, tomate y pan integral.",
     "tag": "Cena",
     "precio": 11.50,
@@ -44,6 +48,7 @@
 },
 {
     "nombre": "Ensalada César Vegana", 
+    "id": 4,
     "descripcion": "Lechuga romana con crutones integrales, parmesano vegano y aderezo cremoso casero.",
     "tag": "Almuerzo",
     "precio": 8.00,
@@ -55,6 +60,7 @@
 },
 {
     "nombre": "Tacos de Coliflor", 
+    "id": 5,
     "descripcion": "Tortillas de maíz rellenas de coliflor asada con especias, salsa de aguacate y cilantro fresco.",
     "tag": "Cena",
     "precio": 10.00,
@@ -66,6 +72,7 @@
 },
 {
     "nombre": "Chía Pudding", 
+    "id": 6,
     "descripcion": "Pudding de chía con leche de coco, frutas frescas y coco rallado.",
     "tag": "Desayuno",
     "precio": 6.50,
@@ -77,6 +84,7 @@
 },
 {
     "nombre": "Sopa de Calabaza", 
+    "id": 7,
     "descripcion": "Crema de calabaza orgánica con un toque de jengibre y semillas tostadas.",
     "tag": "Cena",
     "precio": 7.90,
@@ -88,6 +96,7 @@
 },
 {
     "nombre": "Wrap Mediterráneo", 
+    "id": 8,
     "descripcion": "Wrap integral con hummus, espinacas, tomates secos y pepino fresco.",
     "tag": "Almuerzo",
     "precio": 8.50,
@@ -99,6 +108,7 @@
 },
 {
     "nombre": "Pizza Vegana", 
+    "id": 9,
     "descripcion": "Base de masa integral con tomate, mozzarella vegana, champiñones y albahaca fresca.",
     "tag": "Cena",
     "precio": 12.00,
@@ -109,7 +119,8 @@
     "temporada_recomendada": "Todo el año"
 },
 {
-    "nombre": "Curry de Garbanzos", 
+    "nombre": "Curry de Garbanzos",
+    "id": 10, 
     "descripcion": "Curry de garbanzos especiado con leche de coco y arroz basmati.",
     "tag": "Cena",
     "precio": 9.50,
@@ -121,6 +132,7 @@
 },
 {
     "nombre": "Panqueques de Avena", 
+    "id": 11,
     "descripcion": "Panqueques esponjosos de avena con sirope de arce y frutas frescas.",
     "tag": "Desayuno",
     "precio": 6.80,
@@ -129,5 +141,4 @@
     "ingredientes": ["Avena", "Leche vegetal", "Sirope de arce", "Frutas frescas"],
     "valoracion_media": 4.6,
     "temporada_recomendada": "Todo el año"
-}
-]
+}]
