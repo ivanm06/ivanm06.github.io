@@ -595,6 +595,7 @@ section{
     padding: 6vh 1vw 4vh 1vw;
     position: relative;
     user-select: none;
+    margin-bottom: 10vh;
 }
 #cesta nav{
     font-size: 1.4rem;
@@ -764,6 +765,9 @@ section{
     }
     .infoplato .content{
         margin-bottom: 0;
+    }
+    #cesta .content{
+        margin: .5vh auto;
     }
 }
 ::-webkit-scrollbar{
