@@ -31,6 +31,7 @@ const max = 3 // Items máximos a mostrar.
 
 var more = false // Mostrar más.
 var currentFiltro = 1 // filtro actual "Todo".
+const firstTime = true;
 
 // Mostrar/Ocultar items del menú extra.
 function toggleMore(){
@@ -40,6 +41,7 @@ function toggleMore(){
 
 // Filtrar platos por tipo (Desayuno, Almuerzo, Cena).
 function filtrar(filtro){
+    console.log('a')
     currentFiltro = filtro
     contenedor.innerHTML = ''
     let count = 0
@@ -53,7 +55,9 @@ function filtrar(filtro){
             // Si hay restantes, mostrar botón de (ver más...).
             if(count < len) contenedor.innerHTML += `<div id="more"><span onclick="toggleMore()">ver ${len-max} más...</span></div>`;
             // Navegar hasta arriba.
-            document.getElementById("menus").scrollIntoView()
+            if (firstTime) firstTime = false;
+            else document.getElementById("menus").scrollIntoView();
+
             return
         }
         // Si el tipo no es el indicado, volver atrás y seguir buscando
