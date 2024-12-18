@@ -152,43 +152,56 @@ const cart = []
 const pop = document.querySelector('#cesta #icon div')
 const popup = document.querySelector('#popup')
 const popupMsg = document.querySelector('#popup #mensaje')
-
-const isCestaOnView = () => !cesta.classList.contains('none')
-
-function addToCart(id){
-    const filtered = platos.filter(i => i.id == id);
-    cart.push(filtered[0])
-    pop.classList.remove('none')
-    fillCesta()
-    console.log(isCestaOnView())
-    if(!isCestaOnView()) popupMsg.innerHTML = `${plusSVG}<span style="font-weight: 800;">${filtered[0].nombre}</span><span>añadido a la cesta.</span>`
-    popup.classList.remove('none')
-
-    setTimeout(() => popup.classList.add('none'), 2000)
-}
-function removeFromCart(id){
-    const index = cart.indexOf(platos.filter(i => i.id == id)[0])
-    if (index > -1) cart.splice(index, 1);
-    if(cart.length <= 0) pop.classList.add('none');
-    fillCesta()
-}
 const cesta = document.querySelector('#cesta .container')
 const cestaItems = document.querySelector('#cesta #items')
-function toggleCart(){
-    if (cesta.classList.contains('none')) fillCesta();
-    cesta.classList.toggle('none')
-    hideOverflow(!cesta.classList.contains('none'))
-}
-
-
 const precioTotal = document.querySelector('#total #precio')
 const cantidadTotal = document.querySelector('#total #cantidad')
 
+// Devuelve true si la cesta está en pantalla.
+const isCestaOnView = () => !cesta.classList.contains('none')
+
+// Añade los items a la cesta.
+function addToCart(id){
+    // Filtra para quedarse con el item con id = id
+    const filtered = platos.filter(i => i.id == id);
+    cart.push(filtered[0])
+
+    // Actualiza la cesta si está en pantalla, sino, crea un popup.
+    if(isCestaOnView()) fillCesta();
+    else{
+        popupMsg.innerHTML = `${plusSVG}<span style="font-weight: 800;">${filtered[0].nombre}</span><span>añadido a la cesta.</span>`;
+        popup.classList.remove('none')
+        
+        // Elimina el popup después de 2 segundos.
+        setTimeout(() => popup.classList.add('none'), 2 * 1000)
+    }
+    pop.classList.remove('none')
+}
+
+// Elimina los items de la cesta.
+function removeFromCart(id){
+    const index = cart.indexOf(platos.filter(i => i.id == id)[0])
+    // Solo lo elimina si existe.
+    if (index > -1) cart.splice(index, 1);
+    // Si no hay items en la cesta, elimina el punto indicativo rojo del icono de esta.
+    if(cart.length <= 0) pop.classList.add('none');
+    fillCesta()
+}
+
+// Abre/Cierra la cesta.
+function toggleCart(){
+    if (!isCestaOnView()) fillCesta();
+    cesta.classList.toggle('none')
+    hideOverflow(isCestaOnView())
+}
+
+// Llena la cesta con la información necesaria.
 function fillCesta(){
     cestaItems.innerHTML = ''
     const cartCopy = [...cart]
     const filtered = []
 
+    // Filtra por cada elemento, y, si ya había alguno antes, se le añade la cantidad al atributo "cantidad".
     for (let i of cartCopy){
         if (!filtered.includes(i)){
             i.cantidad = 0
@@ -197,11 +210,12 @@ function fillCesta(){
         i.cantidad += 1
     }
 
+    // Se calculan los datos finales.
     cantidadTotal.innerHTML = filtered.length;
-
     const pt = filtered.length > 0 ? filtered.reduce((a, v) => a + (v.cantidad * v.precio), 0) : 0;
     precioTotal.innerHTML = '$' + (Math.round(pt*100)/100);
 
+    // Crea los elemenos html "cesta-item" por cada item en la cesta.
     for(let item of filtered){
         cestaItems.innerHTML += `<div class="cesta-item">
                     <img src="${item.src}" alt="">
@@ -218,12 +232,11 @@ function fillCesta(){
                 </div>`
     }
 
-
-    if (cart.length <= 0){
-        cestaItems.innerHTML += `<div class="cesta-item" style="place-self: center; margin: 4vh 0;"><span>No hay objetos</span></div>`
-    }
+    // Si no hay items en la cesta, devuelve un elemento html distinto.
+    if (cart.length <= 0) cestaItems.innerHTML += `<div class="cesta-item" style="place-self: center; margin: 4vh 0;"><span>No hay objetos</span></div>`;
 }
 
+// Limpia la cesta.
 function clearCart(){
     cart.length = 0
     pop.classList.add('none')
