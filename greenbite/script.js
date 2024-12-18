@@ -77,54 +77,40 @@ function filtrar(filtro){
 // Hacer el primer filtro.
 filtrar(1)
 
-var scrollAnterior = 0;
-var intervalo = false;
-var lastDireccion = false;
-/* document.addEventListener("scroll", e => {
-    if (intervalo) return;
-    let scrollY = document.documentElement.scrollTop;
-    const direccion = scrollAnterior > scrollY;
-    lastDireccion != direccion && direccion ? document.querySelector("header").classList.add("none") : document.querySelector("header").classList.remove("none")
-    lastDireccion = direccion;
-        
-    scrollAnterior = scrollY;
-    intervalo = true;
-    setTimeout(() => intervalo = false, 100);
-}) */
-
-
-
-/* */
-
+// Svgs (Iconos) en formato html.
 const starSvg  = (full) => (`<svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" style=" fill: transparent; "><title></title><polygon points="256 48 256 364 118 464 172 304 32 208 204 208 256 48" style=" transform: rotatey(180deg) translate(-99%, 0%); fill: ${full == 0 ? '#ffc000' : '#dddddd'}; "></polygon><polygon points="256 48 256 364 118 464 172 304 32 208 204 208 256 48" style=" fill: ${full == 2 ? '#dddddd':'#FFC106'}; "></polygon></svg>`)
 const crossSvg = ('<svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>');
 
-const item = platos[0];
-
+// Función para cerrar el menú "infoplato".
 function close(){
     document.getElementById('infoplato').classList.add('none'); 
     document.body.style.overflow = 'auto'
 }
 
 const infoplato = document.getElementById('infoplato');
+
+// Función para que cuando se haga click fuera del menú, se cierre este.
 infoplato.addEventListener('click', ()=>{
     infoplato.classList.add('none'); 
     document.body.style.overflow = 'auto'
 })
 
+// Generador del menú "infoplato".
 function tp(code){
     const item = platos[code];
     document.body.style.overflow = 'hidden'
-    var alergenos = ''
-    for(let a of item.alergenos){
-        let splitted = a.split('(');
-        alergenos += `<li class="${a.includes('opcional') ? 'opcional' : ''}">${splitted[0]}</li>`
-    }
+
+    // Conversion de los alergenos a html.
+    const alergenos = item.alergenos.map(i => `<li class="${a.includes('opcional') ? 'opcional' : ''}">${a.split('(')[0]}</li>`)
+
+    // Conversion de los ingredientes a html.
     var ingredientes = item.ingredientes.map(i => {return `<li>> ${i}</li>`})
 
+    // Creación de los iconos de la puntuación.
     const mod = Math.floor(item.valoracion_media);
     var puntuacion = starSvg(0).repeat(mod) + starSvg(1).repeat(item.valoracion_media-mod > .7 ? 1 : 0) + starSvg(2).repeat(item.valoracion_media-mod > .7 ? 4-mod : 5-mod)
 
+    // Creacion del elemento HTML.
     infoplato.innerHTML = `<div class="content" onclick="event.stopPropagation()">
                         <span onclick="document.getElementById('infoplato').classList.add('none'); document.body.style.overflow = 'auto'">${crossSvg}</span>
                         <h2>${item.nombre}</h2>
@@ -137,7 +123,7 @@ function tp(code){
                         <p class="price">$${item.precio}</p>
                         <div class="menualergeno">
                             <h4>Alérgenos:</h4>
-                            <ul class="alergenos">${alergenos}</ul>
+                            <ul class="alergenos">${alergenos.join('')}</ul>
                         </div>
                         <h4>Ingredientes:</h4>
                         <ul>${ingredientes.join('')}</ul>
@@ -147,5 +133,6 @@ function tp(code){
                         </di>
                     </div>`
 
+    // Mostrar menu "infoplato".
     infoplato.classList.remove('none');
 }
