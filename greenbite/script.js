@@ -101,7 +101,7 @@ function tp(code){
     document.body.style.overflow = 'hidden'
 
     // Conversion de los alergenos a html.
-    const alergenos = item.alergenos.map(i => `<li class="${a.includes('opcional') ? 'opcional' : ''}">${a.split('(')[0]}</li>`)
+    const alergenos = item.alergenos.map((a, i) => `<li class="${a.includes('opcional') ? 'opcional' : ''}">${a.split('(')[0]}</li>`)
 
     // Conversion de los ingredientes a html.
     var ingredientes = item.ingredientes.map(i => {return `<li>> ${i}</li>`})
