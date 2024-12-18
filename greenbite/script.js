@@ -41,7 +41,6 @@ function toggleMore(){
 
 // Filtrar platos por tipo (Desayuno, Almuerzo, Cena).
 function filtrar(filtro){
-    console.log('a')
     currentFiltro = filtro
     contenedor.innerHTML = ''
     let count = 0
