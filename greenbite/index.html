@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <div class="logo">
+                <img src="./images/logo2.png" alt="">
+                <p>Green<span>Bite</span></p>
+            </div>
+            <svg onclick="toggleMenu()" id="menu1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-justify"><path d="M3 12h18"/><path d="M3 18h18"/><path d="M3 6h18"/></svg>
+            <svg class="none" onclick="toggleMenu()" id="menu2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>    
+            <div class="none nav">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#menus">Menús</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <menu class="none desplegable">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#menus">Menús</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <section>
+            <section class="landing">
+                <img src="./images/logo_name.png" alt="">
+                <h1>Comida Saludable y ecológica a tu puerta</h1>
+                <h2>Disfruta de deliciosos platos preparados con ingredientes orgánicos y locales</h2>
+            </section>
+            <section class="panel">
+                <h2>Por qué elegir GreenBite</h2>
+                <div id="icons">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                        <h3>100% Orgánico</h3>
+                        <p>Ingredientes frescos y orgánicos en todos nuestros platos</p>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                        <h3>Entrega rápida</h3>
+                        <p>Entregamos tu comida en menos de 30 minutos</p>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <h3>Abierto 24/7</h3>
+                        <p>Pide a cualquier hora, estamos siempre disponibles</p>
+                    </div>
+                </div>
+            </section>
+            <h1 id="menus">Menú</h1>
+            <div class="menu-filter">
+                <span>Filtrar por:</span>
+                <select name="filtro" id="filtro">
+                    <option selected value="1">Todo</option>
+                    <option value="2">Desayuno</option>
+                    <option value="3">Almuerzo</option>
+                    <option value="4">Cena</option>
+                </select>
+            </div>
+                <section class="infoplato none" id="infoplato">
+                    <span id="close"></span>
+                    <!-- Contenedor que será rellenado dinámicamente. -->
+                </section>
+            <section class="menu" id="menu">
+                <!-- Contenedor que será rellenado dinámicamente. -->
+            </section>
+        </section>
+        <h1 id="contacto">Contáctanos</h1>
+        <section class="contacto">
+            <form action="">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" required></textarea>
+                <input type="submit" value="Enviar Mensaje">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h1>GreenBite</h1>
+            <p>Comida saludable y ecológica a domicilio</p>
+        </div>
+        <div>
+            <h1>Contacto</h1>
+            <p>Email: info@greenbite.com</p>
+            <p>Teléfono: (34) 629-348-542</p>
+        </div>
+        <div>
+            <h1>Síguenos</h1>
+            <div id="socials">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            </div>    
+        </div>
+        <p id="copy">© 2024 GreenBite. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

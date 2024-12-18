@@ -1,0 +1,133 @@
+[{
+    "nombre": "Açai Bowl", 
+    "descripcion": "Un tazón energizante de açai con frutas frescas, granola y un toque de miel orgánica.",
+    "tag": "Desayuno",
+    "precio": 7.50,
+    "src": "./images/acai-bowl.jpg",
+    "alergenos": ["Frutas (mango, plátano)", "Miel", "Gluten (granola)", "Frutos secos (opcional en la granola)"],
+    "ingredientes": ["Açai", "Plátano", "Frutas frescas", "Granola", "Miel"],
+    "valoracion_media": 4.7,
+    "temporada_recomendada": "Verano"
+},
+{
+    "nombre": "Smoothie Verde", 
+    "descripcion": "Una mezcla refrescante de espinacas, kale, mango, piña y leche de almendras.",
+    "tag": "Desayuno",
+    "precio": 5.90,
+    "src": "./images/smoothie-verde.jpg",
+    "alergenos": ["Frutas (mango, piña)", "Frutos secos (leche de almendras)"],
+    "ingredientes": ["Espinacas", "Kale", "Piña", "Mango", "Leche de almendras"],
+    "valoracion_media": 2.9,
+    "temporada_recomendada": "Primavera"
+},
+{
+    "nombre": "Quinoa Bowl", 
+    "descripcion": "Quinoa orgánica con vegetales asados, garbanzos especiados y aderezo de tahini.",
+    "tag": "Almuerzo",
+    "precio": 9.20,
+    "src": "./images/quinoa-bowl.jpg",
+    "alergenos": ["Sésamo (tahini)", "Legumbres (garbanzos)"],
+    "ingredientes": ["Quinoa", "Garbanzos", "Vegetales asados", "Aderezo de tahini"],
+    "valoracion_media": 4.8,
+    "temporada_recomendada": "Todo el año"
+},
+{
+    "nombre": "Hamburguesa Vegana", 
+    "descripcion": "Hamburguesa de lentejas y remolacha con aguacate, tomate y pan integral.",
+    "tag": "Cena",
+    "precio": 11.50,
+    "src": "./images/hamburguesa-vegana.jpg",
+    "alergenos": ["Gluten (pan integral)", "Legumbres (lentejas)", "Soja (en la salsa, opcional)"],
+    "ingredientes": ["Lentejas", "Remolacha", "Aguacate", "Tomate", "Pan integral"],
+    "valoracion_media": 4.6,
+    "temporada_recomendada": "Otoño"
+},
+{
+    "nombre": "Ensalada César Vegana", 
+    "descripcion": "Lechuga romana con crutones integrales, parmesano vegano y aderezo cremoso casero.",
+    "tag": "Almuerzo",
+    "precio": 8.00,
+    "src": "./images/ensalada-cesar-vegana.jpg",
+    "alergenos": ["Gluten (crutones)", "Soja (parmesano vegano)", "Frutos secos (en el aderezo, opcional)"],
+    "ingredientes": ["Lechuga romana", "Crutones", "Parmesano vegano", "Aderezo cremoso"],
+    "valoracion_media": 4.4,
+    "temporada_recomendada": "Primavera"
+},
+{
+    "nombre": "Tacos de Coliflor", 
+    "descripcion": "Tortillas de maíz rellenas de coliflor asada con especias, salsa de aguacate y cilantro fresco.",
+    "tag": "Cena",
+    "precio": 10.00,
+    "src": "./images/tacos-de-coliflor.webp",
+    "alergenos": ["Gluten (si se usa tortilla de trigo)", "Aguacate"],
+    "ingredientes": ["Coliflor", "Tortillas", "Aguacate", "Cilantro", "Especias"],
+    "valoracion_media": 2.7,
+    "temporada_recomendada": "Todo el año"
+},
+{
+    "nombre": "Chía Pudding", 
+    "descripcion": "Pudding de chía con leche de coco, frutas frescas y coco rallado.",
+    "tag": "Desayuno",
+    "precio": 6.50,
+    "src": "./images/chia-pudding.jpg",
+    "alergenos": ["Frutos secos (en el topping, opcional)", "Coco"],
+    "ingredientes": ["Chía", "Leche de coco", "Frutas frescas", "Coco rallado"],
+    "valoracion_media": 4.3,
+    "temporada_recomendada": "Verano"
+},
+{
+    "nombre": "Sopa de Calabaza", 
+    "descripcion": "Crema de calabaza orgánica con un toque de jengibre y semillas tostadas.",
+    "tag": "Cena",
+    "precio": 7.90,
+    "src": "./images/sopa-de-calabaza.webp",
+    "alergenos": ["Semillas (girasol, opcional)"],
+    "ingredientes": ["Calabaza", "Jengibre", "Semillas", "Caldo vegetal"],
+    "valoracion_media": 0.5,
+    "temporada_recomendada": "Invierno"
+},
+{
+    "nombre": "Wrap Mediterráneo", 
+    "descripcion": "Wrap integral con hummus, espinacas, tomates secos y pepino fresco.",
+    "tag": "Almuerzo",
+    "precio": 8.50,
+    "src": "./images/wrap-mediterraneo.jpg",
+    "alergenos": ["Gluten (wrap integral)", "Sésamo (hummus)"],
+    "ingredientes": ["Hummus", "Espinacas", "Tomates secos", "Pepino", "Wrap integral"],
+    "valoracion_media": 4.6,
+    "temporada_recomendada": "Todo el año"
+},
+{
+    "nombre": "Pizza Vegana", 
+    "descripcion": "Base de masa integral con tomate, mozzarella vegana, champiñones y albahaca fresca.",
+    "tag": "Cena",
+    "precio": 12.00,
+    "src": "./images/pizza-vegana.jpg",
+    "alergenos": ["Gluten (base de pizza)", "Soja (mozzarella vegana)"],
+    "ingredientes": ["Masa integral", "Tomate", "Mozzarella vegana", "Champiñones", "Albahaca fresca"],
+    "valoracion_media": 4.8,
+    "temporada_recomendada": "Todo el año"
+},
+{
+    "nombre": "Curry de Garbanzos", 
+    "descripcion": "Curry de garbanzos especiado con leche de coco y arroz basmati.",
+    "tag": "Cena",
+    "precio": 9.50,
+    "src": "./images/curry-de-garbanzos.jpg",
+    "alergenos": ["Legumbres (garbanzos)", "Coco"],
+    "ingredientes": ["Garbanzos", "Leche de coco", "Especias", "Arroz basmati"],
+    "valoracion_media": 4.9,
+    "temporada_recomendada": "Otoño"
+},
+{
+    "nombre": "Panqueques de Avena", 
+    "descripcion": "Panqueques esponjosos de avena con sirope de arce y frutas frescas.",
+    "tag": "Desayuno",
+    "precio": 6.80,
+    "src": "./images/panqueques-de-avena.jpg",
+    "alergenos": ["Gluten (si la avena no es certificada sin gluten)", "Frutas (fresas, opcional)", "Frutos secos (topping opcional)"],
+    "ingredientes": ["Avena", "Leche vegetal", "Sirope de arce", "Frutas frescas"],
+    "valoracion_media": 4.6,
+    "temporada_recomendada": "Todo el año"
+}
+]
