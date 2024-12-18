@@ -400,7 +400,7 @@ section{
 .infoplato .content{
     width: 85%;
     max-width: 800px;
-    margin: 1vh auto;
+    margin: 2.5vh auto;
     display: flex;
     padding: .5vh 1vw 2vh 1vw;
     background-color: rgb(242, 242, 242);
@@ -475,7 +475,6 @@ section{
 .infoplato .content button:hover{
     background-color: var(--green3);
 }
-
 .under svg{
     width: 30px;
     height: auto;
