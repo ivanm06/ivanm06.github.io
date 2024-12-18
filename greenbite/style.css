@@ -17,6 +17,7 @@ body{
     text-align: center;
     z-index: 0;
     overflow-x: hidden;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 header{
     position: fixed;
@@ -397,8 +398,11 @@ section{
     overflow: auto;
     font-size: 1rem;
 }
+.infoplato::-webkit-scrollbar{
+    width: 0;
+}
 .infoplato .content{
-    width: 85%;
+    width: 92%;
     max-width: 800px;
     margin: 2.5vh auto;
     display: flex;
@@ -409,33 +413,34 @@ section{
     text-align: left;
     position: relative;
 }
-.infoplato .content .alergenos{
+.infoplato .alergenos{
     display: flex;
     gap: 1vw;
     align-items: center;
     justify-content: left;
-    li{
-        background-color: rgb(200, 172, 12);
-        padding: .5vh 1vw;
-        border-radius: 100vw;
-    }
-    li:nth-child(0){
-        background-color: rgb(12, 160, 44);
-    }
 }
-.infoplato .content .under{
+.infoplato .alergenos li{
+    background-color: rgb(200, 172, 12);
+    padding: .5vh 1vw;
+    border-radius: 100vw;
+    text-align: center;
+}
+.infoplato .alergenos li:nth-child(0){
+    background-color: rgb(12, 160, 44);
+}
+.infoplato .under{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     position: relative;
 }
-.infoplato .content .price{
+.infoplato .price{
     font-weight: 600;
     font-size: 2rem;
     margin: 0;
 }
-.infoplato .content .tag{font-size: 1rem;}
+.infoplato .tag{font-size: 1rem;}
 .infoplato .content h3{
     font-weight: 400;
     color: #505050;
@@ -756,6 +761,9 @@ section{
     #popup{
         right: 0;
         left: unset;
+    }
+    .infoplato .content{
+        margin-bottom: 0;
     }
 }
 ::-webkit-scrollbar{
