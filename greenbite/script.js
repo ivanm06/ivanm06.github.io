@@ -142,7 +142,7 @@ function tp(code){
                             <span>Requerido</span>
                             <span class="opcional">Opcional</span>
                         </div>
-                        <button onclick="addToCart(${code})">${plusSVG} Añadir a lista</button>
+                        <button onclick="addToCart(${code})">${plusSVG} Añadir a cesta.</button>
                     </div>`
 
     // Mostrar menu "infoplato".
